@@ -1,0 +1,163 @@
+/* ── LIGHT TEMA ── */
+:root[data-theme="light"],html.theme-light,html.theme-light :root{
+ --bg:#f0f2f7;
+ --s1:#ffffff;
+ --s2:#e8ebf2;
+ --s3:#dde1ea;
+ --s4:#d0d5e2;
+ --bdr:#c0c8d8;
+ --bdr2:#a8b2c8;
+ --bdr3:#8898b4;
+ --txt:#1a2035;
+ --txt2:#3a4a65;
+ --dim:#6a7890;
+ --dim2:#8898b4;
+ --amber:#d47f00;
+ --amber-dim:rgba(212,127,0,.12);
+ --red:#d42020;
+ --red-dim:rgba(212,32,32,.10);
+ --grn:#16803a;
+ --grn-dim:rgba(22,128,58,.10);
+ --blu:#1a56c8;
+ --blu-dim:rgba(26,86,200,.10);
+ --pur:#7c3aed;
+ --pur-dim:rgba(124,58,237,.10);
+ --cyan:#0891a8;
+ --cyan-dim:rgba(8,145,168,.10);
+ --orange:#c2560a;
+ --orange-dim:rgba(194,86,10,.10);
+ --LB:#e8f4d0;
+ --LF:#2d6a00;
+ --LD:#4a8a10;
+ --LD2:#5a9a20;
+ --LW:#b87000;
+ --LR:#c82000;
+ --LBL:#1a56c8;
+ --CD:#16803a;
+ --CR:#1a56c8;
+ --CW:#d47f00;
+ --CA:#7c3aed;
+ --shadow-sm:0 1px 3px rgba(0,0,0,.15);
+ --shadow-md:0 4px 12px rgba(0,0,0,.2);
+ --shadow-lg:0 8px 32px rgba(0,0,0,.25);
+}
+
+:root{
+ /* ── Temel zemin ── */
+ --bg:#09090e;
+ --s1:#0e0f16;
+ --s2:#13151e;
+ --s3:#0a0b12;
+ --s4:#1a1d2a;
+
+ /* ── Kenarlık ── */
+ --bdr:#1e2232;
+ --bdr2:#252a3a;
+ --bdr3:#303650;
+
+ /* ── Metin ── */
+ --txt:#c8d4e8;
+ --txt2:#a0b0cc;
+ --dim:#8899b5; /* WCAG fix: 42506a→8899b5 (~4.8:1 kontrast, AA geçti) */
+
+ /* ── Font boyutu minimumları (WCAG 1.4.4) ── */
+ --fs-min:0.65rem;   /* ~10.4px — mutlak minimum */
+ --fs-sm:0.75rem;    /* ~12px — etiket / sub */
+ --fs-base:0.875rem; /* ~14px — normal metin */
+ --dim2:#2a3348;
+
+ /* ── Anlam renkleri ── */
+ --amber:#f59e0b;
+ --amber-dim:rgba(245,158,11,.12);
+ --red:#ef4444;
+ --red-dim:rgba(239,68,68,.12);
+ --grn:#22c55e;
+ --grn-dim:rgba(34,197,94,.10);
+ --blu:#3b82f6;
+ --blu-dim:rgba(59,130,246,.10);
+ --pur:#a855f7;
+ --pur-dim:rgba(168,85,247,.10);
+ --cyan:#06b6d4;
+ --cyan-dim:rgba(6,182,212,.10);
+ --orange:#f97316;
+ --orange-dim:rgba(249,115,22,.10);
+
+ /* ── LCD renkleri ── */
+ --LB:#040a02;
+ --LF:#a8d430;
+ --LD:#253808;
+ --LD2:#3a5010;
+ --LW:#f5a200;
+ --LR:#ff3020;
+ --LBL:#38a8ff;
+
+ /* ── Mod renkleri ── */
+ --CD:#22c55e; /* Sürüş */
+ --CR:#3b82f6; /* Dinlenme */
+ --CW:#f59e0b; /* Diğer İş */
+ --CA:#a855f7; /* Uygunluk */
+
+ /* ── Tipografi ── */
+ --M:'Share Tech Mono',monospace;
+ --S:'IBM Plex Sans',sans-serif;
+ --D:'Bebas Neue',sans-serif;
+
+ /* ── Boşluk skalası ── */
+ --sp1:4px;
+ --sp2:8px;
+ --sp3:12px;
+ --sp4:16px;
+ --sp5:24px;
+ --sp6:32px;
+
+ /* ── Font skalası ── */
+ --fs-xs:0.5rem;
+ --fs-sm:0.625rem;
+ --fs-md:0.75rem;
+ --fs-lg:0.875rem;
+ --fs-xl:1rem;
+ --fs-2xl:1.25rem;
+
+ /* ── Border radius ── */
+ --r1:3px;
+ --r2:5px;
+ --r3:8px;
+ --r4:12px;
+
+ /* ── Gölge ── */
+ --shadow-sm:0 1px 3px rgba(0,0,0,.4);
+ --shadow-md:0 4px 12px rgba(0,0,0,.6);
+ --shadow-lg:0 8px 32px rgba(0,0,0,.8);
+
+ /* ── Geçiş ── */
+ --tr-fast:all .1s;
+ --tr-mid:all .2s;
+ --tr-slow:all .35s;
+
+ /* ── Ek renkler (S7) ── */
+ --slate:#64748b;
+ --blue-light:#60a5fa;
+ --violet-light:#a78bfa;
+ --slate-light:#94a3b8;
+ --cyan-light:#38bdf8;
+ --purple-light:#c084fc;
+ --blue-dark:#1d4ed8;
+ --bg-deep:#0a0c10;
+ --bg-zero:#030701;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--txt);font-family:var(--S);overflow-x:hidden!important;padding-top:50px;max-width:100vw;
+ -webkit-tap-highlight-color:rgba(34,197,94,.2); /* iOS tap geri bildirimi */
+}
+::-webkit-scrollbar{width:3px;}::-webkit-scrollbar-thumb{background:var(--amber);}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:999;height:50px;
+ background:rgba(9,9,14,.97);border-bottom:1px solid var(--bdr);
+ display:flex;align-items:center;justify-content:space-between;padding:0 2rem;backdrop-filter:blur(20px);}
+.logo{font-family:var(--D);font-size:1.25rem;letter-spacing:4px;color:var(--amber);}
+.logo em{color:var(--txt);font-style:normal;}
+.nav-l{display:flex;gap:2rem;list-style:none;}
+.nav-l a{font-family:var(--M);font-size:.75rem;letter-spacing:1.5px;color:var(--dim);text-transform:uppercase;text-decoration:none;transition:color .2s;}
+.nav-l a:hover{color:var(--amber);}
